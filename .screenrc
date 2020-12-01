@@ -1,0 +1,9 @@
+#change the hardstatus settings to give an window list at the bottom of the
+#screen, with the time and date and with the current window highlighted
+hardstatus alwayslastline
+hardstatus string "%{= Rk}%-w%{= rW}%n %t%{= Rk}%+w"
+
+defscrollback 5000
+defutf8 on
+
+shell -/bin/bash
