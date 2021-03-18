@@ -6,6 +6,12 @@ esac
 
 # stuff for interactive shells
 
+case $TERM in
+  screen*)
+    PROMPT_COMMAND='printf "\033k%s@%s\033\\" "${USER}" "${HOSTNAME%%.*}"'
+    ;;
+esac
+
 # make manpages more readable/printable
 export MANWIDTH=70
 
