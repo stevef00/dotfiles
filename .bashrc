@@ -15,6 +15,14 @@ esac
 # make manpages more readable/printable
 export MANWIDTH=70
 
+if [ -d ~/.bashrc.d ]; then
+  for rc in ~/.bashrc.d/*; do
+    if [ -f "$rc" ]; then
+      . "$rc"
+    fi
+  done
+fi
+
 # host or site specific stuff
 if [ -f ~/.bashrc.local ]; then
   . ~/.bashrc.local
