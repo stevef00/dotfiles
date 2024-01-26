@@ -3,9 +3,6 @@
 # exit if no args
 [ -z "$@" ] && exit 0
 
-# exit unless running under tmux
-[ -z "$TMUX" ] && exit 0
-
 # exit unless stdout is connected to a terminal
 [ -t 1 ] || exit 0
 
