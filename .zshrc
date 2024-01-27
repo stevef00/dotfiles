@@ -8,6 +8,10 @@ if [ -d /opt/homebrew/bin ]; then
   PATH=/opt/homebrew/bin:$PATH
 fi
 
+if type nvim >/dev/null 2>&1; then
+  alias vi=nvim
+fi
+
 precmd() {
   case $TERM in
     screen*)
