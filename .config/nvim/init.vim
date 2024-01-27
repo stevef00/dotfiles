@@ -24,5 +24,5 @@ unmap Y
 
 if exists('$TMUX')
   autocmd BufEnter,BufWrite *
-    \ call system("tmux rename-window 'vi(" . expand("%:t") . ")'")
+    \ call system("tmux rename-window '" . expand("%:t") . "'")
 endif
