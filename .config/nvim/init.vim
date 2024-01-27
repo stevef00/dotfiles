@@ -21,3 +21,8 @@ colorscheme seoul256
 
 " get normal yank entire line behavior
 unmap Y
+
+if exists('$TMUX')
+  autocmd BufEnter,BufWrite *
+    \ call system("tmux rename-window 'vi(" . expand("%:t") . ")'")
+endif
