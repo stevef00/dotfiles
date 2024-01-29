@@ -16,11 +16,14 @@ call plug#end()
 let g:puppet_align_hashes = 0
 
 " background range is: 233 (darkest) - 256 (lightest)
-let g:seoul256_background = 233
+let g:seoul256_background = 235
 colorscheme seoul256
 
 " get normal yank entire line behavior
 unmap Y
+
+set number                     " Show current line number
+set relativenumber             " Show relative line numbers
 
 if exists('$TMUX')
   autocmd BufEnter,BufWrite *
