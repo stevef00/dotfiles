@@ -1,0 +1,43 @@
+set sort              = threads
+set strict_threads    = no
+set pager_stop        = yes
+set pager_index_lines = 0
+set auto_edit         = yes      # neomutt
+
+set edit_headers      = yes      # neomutt
+
+set include           = yes
+set fast_reply        = yes
+
+set mark_old          = no
+
+auto_view text/html
+alternative_order text/enriched text/plain text text/html
+
+set ssl_starttls=yes
+set ssl_force_tls=yes
+
+set wrap=80
+
+#color index color94 default '.*'
+#color indicator default color22
+color index         color136        color234        "~A"                        # all messages
+color indicator     color234        color136
+
+color index_number color068 default
+color index_flags color072 default '~NN'
+color index_author  color140 default '.*'
+color index_subject color074 default '.*'
+
+
+color status color253 color240      # top and bottom status lines
+
+color hdrdefault color124 default   # dark red/
+
+# Header colors:
+color header color124 default ".*"             # dark red
+color header color124 default "^(From)"        # dark red
+color header color124 default "^(Subject)"     # dark red
+color header color124 default "^(CC|BCC)"      # dark red
+
+color attachment color140 default              # light purple

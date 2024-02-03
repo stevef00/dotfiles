@@ -1,0 +1,2 @@
+#text/html; w3m -s -I %{charset} -T text/html -cols 80 -o tabstop=4 %s; nametemplate=%s.html; copiousoutput; x-neomutt-nowrap;
+text/html; lynx -width=70 -dump %s; nametemplate=%s.html; copiousoutput; x-neomutt-nowrap;
