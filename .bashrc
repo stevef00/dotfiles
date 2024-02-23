@@ -6,6 +6,16 @@ esac
 
 # stuff for interactive shells
 
+# source global config if it exists
+case $SHELL in
+  *bash)
+    if [ -f /etc/bashrc ]; then
+      # gnome-terminal on fedora needs this
+      source /etc/bashrc
+    fi
+    ;;
+esac
+
 case $TERM in
   screen*)
     PROMPT_COMMAND='printf "\033k%s@%s\033\\" "${USER}" "${HOSTNAME%%.*}"'
