@@ -16,6 +16,11 @@ case $SHELL in
     ;;
 esac
 
+HISTSIZE='1000'
+HISTFILESIZE='10000'
+HISTTIMEFORMAT='[%D %T] '
+export HISTSIZE HISTFILESIZE HISTTIMEFORMAT
+
 case $TERM in
   screen*)
     PROMPT_COMMAND='printf "\033k%s@%s\033\\" "${USER}" "${HOSTNAME%%.*}"'
