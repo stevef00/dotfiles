@@ -1,7 +1,7 @@
 function ps1_parse_git_branch {
       local branch="$(git branch --show-current 2>/dev/null || : )"
       if [ -n "$branch" ]; then
-        branch="($branch) "
+        branch="[$branch] "
       fi
       echo -e "$branch"
 }
