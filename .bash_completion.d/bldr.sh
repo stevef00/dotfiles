@@ -32,12 +32,8 @@ _bldr_complete() {
                     COMPREPLY=( $(compgen -W "${add_opts} ${global_opts}" -- "${cur}") )
                 fi
                 ;;
-            destroy)
-                # 'bldr destroy' requires a HOSTNAME. We'll use the ~/sw/bin/bldr-list output.
-                # If the current word starts with '-', maybe user wants global opts,
-                # but the usage suggests global opts go before the command, so we’ll skip that case.
-
-                # Complete hostnames from bldr-list
+            bnr|destroy|local|reinstall|rescue)
+                # These subcommands require just a HOSTNAME. Use bldr-list to get them.
                 local hostnames
                 hostnames="$(~/sw/bin/bldr-list 2>/dev/null)"
                 COMPREPLY=( $(compgen -W "${hostnames}" -- "${cur}") )
