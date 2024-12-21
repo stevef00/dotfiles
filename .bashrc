@@ -38,6 +38,12 @@ if [ -d ~/.bashrc.d ]; then
   done
 fi
 
+if [ -d ~/.bash_completion.d ]; then
+  for f in ~/.bash_completion.d/*.sh; do
+    source $f
+  done
+fi
+
 # host or site specific stuff
 if [ -f ~/.bashrc.local ]; then
   . ~/.bashrc.local
