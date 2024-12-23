@@ -38,6 +38,33 @@ _bldr_complete() {
                 hostnames="$(~/sw/bin/bldr-list 2>/dev/null)"
                 COMPREPLY=( $(compgen -W "${hostnames}" -- "${cur}") )
                 ;;
+            changeconsole)
+                # 'bldr changeconsole' takes a HOSTNAME and then a CONSOLE selection.
+                if [ $cword -eq 2 ]; then
+                    # First argument after 'changeconsole': complete with hostnames
+                    local hostnames
+                    hostnames="$(~/sw/bin/bldr-list 2>/dev/null)"
+                    COMPREPLY=( $(compgen -W "${hostnames}" -- "${cur}") )
+                elif [ $cword -eq 3 ]; then
+                    # Second argument after 'changeconsole': complete with console options
+                    local console_options="ttyS0 ttyS1"
+                    COMPREPLY=( $(compgen -W "${console_options}" -- "${cur}") )
+                fi
+                ;;
+            changeos)
+                # 'bldr changeos' takes a HOSTNAME and then an OS selection.
+                if [ $cword -eq 2 ]; then
+                    # First argument after 'changeos': complete with hostnames
+                    local hostnames
+                    hostnames="$(~/sw/bin/bldr-list 2>/dev/null)"
+                    COMPREPLY=( $(compgen -W "${hostnames}" -- "${cur}") )
+                elif [ $cword -eq 3 ]; then
+                    # Second argument after 'changeos': complete with OS options
+                    local os_options="almalinux8 centos7 ubuntu-20_04"
+                    COMPREPLY=( $(compgen -W "${os_options}" -- "${cur}") )
+                fi
+                ;;
+
             *)
                 # For other subcommands, no special completion yet.
                 COMPREPLY=()
