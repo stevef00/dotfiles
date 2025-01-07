@@ -2,22 +2,37 @@
 
 ## pandoc
 
-* generate an `html` file from this file:
+* Generate an `html` file from this file:
 
   ```bash
   pandoc ~/.dotfiles/.notes.txt -o ~/.dotfiles/.notes.html
   ```
 
-## nvim
+## neovim
 
-* install plugins:
+* Install plugins:
 
   ```
   :PlugInstall
   ```
 
-* tell neovim to use jinja syntax highlighting for the current file:
+* Tell neovim to use jinja syntax highlighting for the current file:
 
   ```
   :call jinja#AdjustFiletype()
+  ```
+
+## git
+
+* Push an existing repo to my github:
+
+  ```bash
+  git remote add origin git@github.com:${GITHUB_USER}/${REPO_NAME}.git
+  git push -u origin master
+  ```
+
+* Change github remote from `https://` to `ssh`:
+
+  ```bash
+  git remote set-url origin git@github.com:${GITHUB_USER}/${REPO_NAME}.git
   ```
