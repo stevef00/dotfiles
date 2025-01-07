@@ -1,0 +1,23 @@
+# My Notes
+
+## pandoc
+
+* generate an `html` file from this file:
+
+  ```bash
+  pandoc ~/.dotfiles/.notes.txt -o ~/.dotfiles/.notes.html
+  ```
+
+## nvim
+
+* install plugins:
+
+  ```
+  :PlugInstall
+  ```
+
+* tell neovim to use jinja syntax highlighting for the current file:
+
+  ```
+  :call jinja#AdjustFiletype()
+  ```
