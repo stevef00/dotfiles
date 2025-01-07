@@ -10,6 +10,8 @@ call plug#begin()
   Plug 'rodjek/vim-puppet'       " puppet syntax highlighting
   " https://github.com/junegunn/seoul256.vim
   Plug 'junegunn/seoul256.vim'   " color scheme
+  " https://github.com/HiPhish/jinja.vim
+  Plug 'HiPhish/jinja.vim'       " jinja syntax highlighting
 call plug#end()
 
 " vim-puppet: don't align key/vals for => in resources
