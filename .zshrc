@@ -12,6 +12,8 @@ if type nvim >/dev/null 2>&1; then
   alias vi=nvim
 fi
 
+export MANWIDTH=70
+
 precmd() {
   case $TERM in
     screen*)
@@ -20,3 +22,11 @@ precmd() {
     ;;
   esac
 }
+
+if [ -d ~/.zshrc.d ]; then
+  for rc in ~/.zshrc.d/*; do
+    if [ -f "$rc" ]; then
+      . "$rc"
+    fi
+  done
+fi
