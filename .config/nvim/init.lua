@@ -30,7 +30,7 @@ local ts = require('nvim-treesitter.configs')
 
 ts.setup({
   -- Parsers you actually write every week:
-  ensure_installed = { 'lua', 'bash', 'python', 'javascript', 'html', 'css' },
+  ensure_installed = { 'lua', 'bash', 'python', 'javascript', 'html', 'css', 'markdown' },
   highlight = { enable = true },   -- turn on new highlighter
   indent    = { enable = true },   -- smarter indent
   incremental_selection = {
