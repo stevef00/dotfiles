@@ -22,6 +22,12 @@ vim.cmd [[
 
     " jinja syntax highlighting
     Plug 'HiPhish/jinja.vim'
+
+    " mappings to change surrounding elements (quotes, parens, xml tags, etc.)
+    Plug 'tpope/vim-surround'
+
+    " enable repeating supported plugin maps with "."
+    Plug 'tpope/vim-repeat'
   call plug#end()
 ]]
 
