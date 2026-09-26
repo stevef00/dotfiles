@@ -38,3 +38,8 @@ if type git >/dev/null 2>&1; then
 else
   PS1="[\u@\h \w] \$ "
 fi
+
+# https://github.com/catppuccin/starship/tree/main
+if type starship >/dev/null 2>&1; then
+  eval "$(starship init bash)"
+fi
