@@ -46,7 +46,7 @@ require('nvim-treesitter').install {
 vim.g.puppet_align_hashes = 0
 
 require("catppuccin").setup({
-  flavor = "frappe",
+  flavour = "frappe",
   transparent_background = true, -- disables setting the background color.
 })
 vim.cmd('colorscheme catppuccin-nvim') -- catppuccin-latte, catppuccin-frappe, catppuccin-macchiato, catppuccin-mocha
