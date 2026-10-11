@@ -1,3 +1,6 @@
+vim.g.mapleader = ' '
+vim.g.maplocalleader = ' '
+
 -- Neovim Lua configuration converted from the former init.vim
 -- =====================================================================
 -- vim‑plug -------------------------------------------------------------
@@ -70,3 +73,8 @@ if vim.env.TMUX ~= nil and vim.env.TMUX ~= '' then
     end,
   })
 end
+
+-- Clear search highlighting when press <Esc> key
+vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR><Esc>', { desc = 'Clear search highlighting' })
+-- Clear search highlighting when press <leader>h
+vim.keymap.set('n', '<leader>h', '<cmd>nohlsearch<CR>', { desc = 'Clear search highlighting' })
